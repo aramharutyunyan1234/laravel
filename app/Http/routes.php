@@ -12,7 +12,10 @@
 */
 
 Route::get('/', function () {
+
     return view('welcome');
+
 });
 
-Route::get('index/index', 'IndexController@index');
+Route::get('index/index/', 'IndexController@index');
+Route::post('index/index/', 'IndexController@index');
