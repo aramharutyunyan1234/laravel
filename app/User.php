@@ -36,4 +36,13 @@ class User extends Model implements AuthenticatableContract,
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    public function select(){
+
+        $user = DB::table('login')->where('name', 'crdf')->first();
+        var_dump($user);die;
+        return $user->name;
+
+    }
+
 }
